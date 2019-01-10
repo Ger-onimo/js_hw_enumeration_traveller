@@ -33,8 +33,20 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 };
 
 Traveller.prototype.getUniqueModesOfTransport = function () {
-
+//   transportArray = [];
+//   for (const mode in this.journeys);{
+//    transportArray.push(mode[transport]);
+// }
+  return transportArray.filter(function(journey,i,a) => a.indexOf(journey)==i)
+    {return journey.transport
+  })
 };
 
 
 module.exports = Traveller;
+
+// var myArray = ['a', 1, 'a', 2, '1'];
+
+// let unique = [...new Set(myArray)];
+
+// .filter((v,i,a)=>a.indexOf(v)==i)
